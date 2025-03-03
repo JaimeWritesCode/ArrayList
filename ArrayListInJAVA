@@ -18,21 +18,19 @@ public class Main {
         do {
             switch (process) {
                 case 1:
-                    System.out.print("Enter a name (Enter stop to end): ");
-                    String name = input.nextLine();
-                    insertedName.add(name);
-
                     do {
+
+                        System.out.print("Enter a name (Enter stop to end): ");
+                        String name = input.nextLine();
+
                         if (name.equals("stop")) {
-                            System.out.println("Inserted Names: ");
-                            display(insertedName);
                             break;
                         } else {
-                            System.out.print("Enter a name (Enter stop to end): ");
-                            name = input.nextLine();
                             insertedName.add(name);
                         }
                     } while (options.equals("y"));
+
+                    display(insertedName);
 
 
                 case 2:
